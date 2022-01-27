@@ -1,7 +1,7 @@
-from views import Index, Program, Contacts
+from views import Index, Items, Contacts
 
 routes = {
     '/': Index(),
-    '/program/': Program(),
+    '/items/': Items(),
     '/contacts/': Contacts()
 }

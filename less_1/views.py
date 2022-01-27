@@ -10,9 +10,9 @@ class Index:
                                          })
 
 
-class Program:
+class Items:
     def __call__(self, request):
-        return '200 OK', render_template('program.html',
+        return '200 OK', render_template('items.html',
                                          data={'moscow_time': request.get('CURRENT_DATE_TIME', None)})
 
 
