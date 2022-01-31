@@ -8,5 +8,5 @@ class AnalogDB:
             data_in_db = json.load(file)
         with open('db.json','w', encoding='utf-8') as f:
             data_in_db.append(data)
-            json.dump(data_in_db, f)
+            json.dump(data_in_db, f,ensure_ascii=False)
 
