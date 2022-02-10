@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+Savchenko_Framework | Items
+{% endblock %}
+{% block style %}
+{% include "jinja_style.html" %}
+{% endblock %}
+
+{% block menu %}
+{% include "inc-type_meetup_list-menu.html" %}
+{% endblock %}
+
+{% block body %}
+    <div id="site_content">
+        <div id="content">
+            <div>
+                {% if not data.types %}
+                    <h1> К сожалению вы еще создали тип звонка :(</h1>
+                    <a href="/create-type/">Создайте Новый Тип звонка!</a>
+                {% else %}
+                    <h1>Попробуй следующие варианты звонков:</h1>
+
+                    {% for elem in data.types %}
+                        <li>
+                            {{elem.name}} <span>{{elem.datetime_at}}</span>
+                        </li>
+                    {% endfor %}
+                    <a href="/create-type/">Создать еще один тип</a>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+Savchenko_Framework | Items
+{% endblock %}
+{% block style %}
+{% include "jinja_style.html" %}
+{% endblock %}
+
+{% block menu %}
+{% include "inc-new_call-menu.html" %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Создание звонка</h1>
+        <form method="post">
+            {% if not data.types %}
+                <h1> К сожалению вы еще создали тип звонка :(</h1>
+                <a href="/create-type/">Создайте Новый Тип звонка!</a>
+            {% else %}
+                <h1> Создайте новый звонок:</h1>
+                <select id="call" name="call_type">
+                    {% for elem in data.types %}
+
+                        <option value="{{elem.type}}">{{elem.name}}</option>
+                    {% endfor %}
+                </select>
+                <input type="text" name="name" required placeholder="Название">
+                <button type="submit">Save</button>
+            {% endif %}
+        </form>
+    </div>
+{% endblock %}
