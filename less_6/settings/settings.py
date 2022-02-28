@@ -37,7 +37,12 @@ class User(AbstractUser):
 
 
 class Speaker(AbstractUser):
-    pass
+    def __init__(self, username=None, type=None):
+        # В каких созвонах участвовал
+        self.meetups = []
+        super().__init__()
+        self.username = username
+        self.type = type
 
 
 class UserManager:

@@ -144,7 +144,12 @@ class UserCreateView(CreateView):
     template_name = 'create_user.html'
 
     def create_obj(self, data: dict):
-        print(data)
         new_user = site.create_user(type_in=data.get('user_type'),name=data.get('name'))
         site.user.append(new_user)
-        print(site.user)
+
+
+@Route(routes=routes, url='/api/')
+class CourseApi:
+    @Debug(name='CourseApi')
+    def __call__(self, request):
+        return '200 OK', BaseSerializer(site.courses).save()

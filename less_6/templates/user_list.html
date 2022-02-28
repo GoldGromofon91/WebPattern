@@ -21,7 +21,7 @@ Savchenko_Framework | Users
             <h1>Список пользователей</h1>
             {% for item in data %}
                 <li>
-                    <p>Login:</p> {{item.username}} - <p>Тип пользователя:</p> {{item.type}}
+                    <b>ID:</b> {{item.id}}, <b>Login:</b> {{item.username}}, <b>Тип пользователя:</b> {{item.type}}
                 </li>
             {% endfor %}
         {% endif %}
