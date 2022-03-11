@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+Savchenko_Framework | Users
+{% endblock %}
+{% block style %}
+{% include "jinja_style.html" %}
+{% endblock %}
+
+{% block menu %}
+{% include "inc-user_list-menu.html" %}
+{% endblock %}
+
+{% block body %}
+	<div>
+        <span><a href="/create-user/">Создать пользователя</a></span>
+	</div>
+    <div>
+        {% if not data %}
+            <h1>Упс, пока никого нет онлайн</h1>
+        {% else %}
+            <h1>Список пользователей</h1>
+            {% for item in data %}
+                <li>
+                    <b>ID:</b> {{item.id}}, <b>Login:</b> {{item.username}}, <b>Тип пользователя:</b> {{item.type}}
+                </li>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

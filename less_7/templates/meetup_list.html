@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+Savchenko_Framework | Items
+{% endblock %}
+{% block style %}
+{% include "jinja_style.html" %}
+{% endblock %}
+
+{% block menu %}
+{% include "inc-list-menu.html" %}
+{% endblock %}
+
+{% block body %}
+    <div id="site_content">
+        <div id="content">
+            <div>
+                {% if not data %}
+                    <h1> Вы еще не звонили :(</h1>
+                    <a href="/create-call/?id={{id}}">Создайте Новый звонок!</a>
+                {% else %}
+                    <h1>Попробуй следующие варианты звонков(вы ранее уже их совершали):</h1>
+
+                    {% for elem in data.meetup %}
+                        <li>
+                            {{elem.name}} <span><a href="/copy-call/">скопировать</a></span>
+                        </li>
+                    {% endfor %}
+                    <a href="/create-call/?id={{id}}">Новый звонок</a>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
