@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+Savchenko_Framework | Users
+{% endblock %}
+{% block style %}
+{% include "jinja_style.html" %}
+{% endblock %}
+
+{% block menu %}
+{% include "inc-user_list-menu.html" %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Создание Типа</h1>
+        <form method="post">
+                <select id="call" name="user_type">
+                    <option value="guest">Гость</option>
+                    <option value="user">Пользователь</option>
+                    <option value="speaker">Спикер</option>
+                </select>
+            <input type="text" name="name" required placeholder="Имя">
+            <button type="submit">Save</button>
+        </form>
+    </div>
+{% endblock %}
