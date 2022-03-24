@@ -35,3 +35,25 @@ Less_7:
 Less_8:
 * Произвел анализ проекта
 
+Less_9:
+### Краткое описание сервиса:
+    1 - Django_shop - Приложение магазина
+    2 - Flask - Приложение Админка для магазина
+    3 - Rabbitmq - очередь сообщений
+    4 - Приложение "ремонта телефонов"
+
+
+### Установка и развертывание:
+    # windows 10
+    https://docs.docker.com/desktop/windows/install/
+
+    # debian
+    https://docs.docker.com/engine/install/debian/
+    
+#### После устаноки Docker запускаем контейнеры с пересборкой 
+    docker-compose up --build -d
+
+#### Сервисы
+    http://127.0.0.1:8000 - Django_shop
+    http://127.0.0.1:5000 - Flask
+    http://127.0.0.1:15672 - Rabbitmq_manager
