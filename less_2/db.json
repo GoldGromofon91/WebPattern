@@ -1,0 +1,44 @@
+[
+  {
+    "METHOD": "POST",
+    "METHOD_GET_QUERY_IN": null,
+    "POST_DATA": {
+      "name": "asd",
+      "email": "ad@asd.ru",
+      "enquiry": "asd"
+    },
+    "SERVER_DATE_TIME": "2022-01-30 16:18:07",
+    "CURRENT_DATE_TIME": "2022-01-30 19:18:07"
+  },
+  {
+    "METHOD": "POST",
+    "METHOD_GET_QUERY_IN": null,
+    "POST_DATA": {
+      "name": "asd",
+      "email": "ad@asd.ru",
+      "enquiry": "asd"
+    },
+    "SERVER_DATE_TIME": "2022-01-30 16:18:15",
+    "CURRENT_DATE_TIME": "2022-01-30 19:18:15"
+  },
+  {
+    "METHOD": "GET",
+    "METHOD_GET_QUERY_IN": {
+      "q": "12"
+    },
+    "POST_DATA": null,
+    "SERVER_DATE_TIME": "2022-01-30 16:19:35",
+    "CURRENT_DATE_TIME": "2022-01-30 19:19:35"
+  },
+  {
+    "METHOD": "POST",
+    "METHOD_GET_QUERY_IN": null,
+    "POST_DATA": {
+      "name": "asd",
+      "email": "asd@ad.ru",
+      "enquiry": "ТЕКСТ"
+    },
+    "SERVER_DATE_TIME": "2022-01-31 11:30:06",
+    "CURRENT_DATE_TIME": "2022-01-31 14:30:06"
+  }
+]
