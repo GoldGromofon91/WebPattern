@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% include "jinja_links.html" %}
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <div id="main">
+        {% block menu %}{% endblock %}
+        {% block body %}{% endblock %}
+    </div>
+    {% include "jinja_footer.html" %}
+</body>
+</html>
