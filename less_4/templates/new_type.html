@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+Savchenko_Framework | Items
+{% endblock %}
+{% block style %}
+{% include "jinja_style.html" %}
+{% endblock %}
+
+{% block menu %}
+{% include "inc-new_call-menu.html" %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Создание Типа</h1>
+        <form method="post">
+                <select id="call" name="call_type">
+                    <option value="team">TeamCall</option>
+                    <option value="work">WorkCall</option>
+                    <option value="p2p">P2P</option>
+                </select>
+            <input type="text" name="name" required placeholder="Название">
+            <button type="submit">Save</button>
+        </form>
+    </div>
+{% endblock %}
